@@ -1,0 +1,4 @@
+data/template_cache/**/*
+data/stylesheet_cache/*.scss*
+data/db/*.db
+data/log/*.log

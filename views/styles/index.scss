@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+* {
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Arial", "Helvetica", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+@mixin main-wrapper() {
+  width: 960px;
+  margin: 0 auto;
+}
+
+a:link    { color: #333333; } 
+a:visited { color: #555555; } 
+a:hover   { color: #aaaaaa; } 
+a:active  { color: #555555; }
+
+body {
+  font-size: 100%;
+  color: #333333;
+
+  header {
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+    height: 150px;
+
+    h1 {
+      @include main-wrapper();
+      text-align: left;
+      height: 100%;
+      line-height: 150px;
+      background-image: url("./images/header.jpg");
+      background-repeat: no-repeat;
+
+      a {
+        vertical-align: -30%;
+        font-size: 1.4em;
+        color: #ccaaaa;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+      }
+
+      a:link    { color: #ccaaaa; } 
+      a:visited { color: #ccaaaa; } 
+      a:hover   { color: #ccaaaa; } 
+      a:active  { color: #ccaaaa; }
+    }
+  }
+
+  div#content {
+      @include main-wrapper();
+      margin-top: 3em;
+
+      div#main {
+        width: 700px;
+        float: left;
+
+        article {
+          margin-bottom: 8em;
+
+          h2 {
+            margin-bottom: 1em;
+            border-left: 10px solid #e6d0d0;
+            padding-left: 0.5em;
+
+            a { text-decoration: none; }
+            a:link    { color: #853737; }
+            a:visited { color: #853737; }
+            a:hover   { color: #853737; }
+            a:active  { color: #853737; }
+          }
+
+          p {
+            line-height: 1.4em;
+            margin-bottom: 1em;
+          }
+
+          div.article-footer {
+            p.article-date {
+              font-size: 0.8em;
+              color: #998686;
+              text-align: right;
+              margin-right: 3em;
+            }
+          }
+        }
+      }
+
+      nav {
+        width: 240px;
+        float: left;
+        margin-left: 10px;
+
+        div {
+          margin-bottom: 2em;
+          margin-left: 1em;
+
+          h2 {
+            color: #cccccc;
+            color: #ccaaaa;
+            border-bottom: 1px solid #ccaaaa;
+            margin-bottom: 0.5em;
+            margin-left: -1em;
+          }
+
+          a {
+            font-size: 0.9em;
+          }
+
+          ul {
+            list-style-type: none;
+
+            li {
+              margin-bottom: 0.5em;
+
+              ul {
+                li {
+                  margin-left: 1em;
+                  margin-bottom: 0em;
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+
+  footer {
+    @include main-wrapper();
+    clear: both;
+    margin-bottom: 2em;
+  }
+
+}

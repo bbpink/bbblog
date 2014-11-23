@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+* {
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Arial", "Helvetica", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+@mixin main-wrapper() {
+  width: 960px;
+  margin: 0 auto;
+}
+
+a:link    { color: #333333; } 
+a:visited { color: #555555; } 
+a:hover   { color: #aaaaaa; } 
+a:active  { color: #555555; }
+
+body {
+  font-size: 100%;
+  color: #333333;
+
+  header {
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+    height: 50px;
+
+    h1 {
+      @include main-wrapper();
+      text-align: left;
+      height: 100%;
+      line-height: 50px;
+
+      a {
+        vertical-align: -30%;
+        font-size: 1.4em;
+        color: #ccaaaa;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+      }
+
+      a:link    { color: #ccaaaa; } 
+      a:visited { color: #ccaaaa; } 
+      a:hover   { color: #ccaaaa; } 
+      a:active  { color: #ccaaaa; }
+    }
+  }
+
+  div#content {
+      @include main-wrapper();
+      margin-top: 3em;
+
+      div#main {
+        width: 700px;
+        float: left;
+
+        article {
+          margin-bottom: 8em;
+
+          h2 {
+            margin-bottom: 1em;
+            border-left: 10px solid #e6d0d0;
+            padding-left: 0.5em;
+
+            a { text-decoration: none; }
+            a:link    { color: #853737; }
+            a:visited { color: #853737; }
+            a:hover   { color: #853737; }
+            a:active  { color: #853737; }
+          }
+
+          p {
+            text-indent: 1em;
+            line-height: 1.4em;
+            margin-bottom: 1em;
+          }
+
+          div.article-footer {
+            p.article-date {
+              font-size: 0.8em;
+              color: #998686;
+              text-align: right;
+              margin-right: 3em;
+            }
+          }
+        }
+
+        form {
+
+          input {
+            display: block;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 0.5em 0 0.5em 1em;
+            box-shadow: inset 1px 2px 9px -6px rgba(0,0,0,0.5);
+            margin-bottom: 1em;
+          }
+
+          input:focus { border: 1px solid #66ccff }
+
+          textarea {
+            display: block;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 0.5em 0 0.5em 1em;
+            box-shadow: inset 1px 2px 9px -6px rgba(0,0,0,0.5);
+            height: 17em;
+          }
+
+          textarea:focus { border: 1px solid #66ccff }
+
+          button {
+            margin: 1em 0 1em 0;
+            border: 1px solid #ccaaaa;
+            border-radius: 5px;
+            padding: 0.3em 0.8em 0.3em 0.8em;
+            color: #cc8888;
+            text-shadow: 1px 1px 1px #eee;
+            min-width: 3em;
+          }
+
+          button#button-publish { padding: 0.8em; }
+
+          button:hover { border: 1px solid #66ccff; text-shadow: 1px 1px 1px #ddd; }
+
+        }
+
+        ul {
+          list-style-type: none;
+
+          button {
+            border: 1px solid #ccaaaa;
+            border-radius: 5px;
+            padding: 0.2em;
+            color: #cc8888;
+            text-shadow: 1px 1px 1px #eee;
+            margin-right: 0.5em;
+          }
+
+          li {
+            margin-bottom: 1em;
+            padding: 0.5em;
+            border: 1px solid #ddd;
+
+            span.title {
+              font-weight: bold;
+              color: #666;
+            }
+
+            span.created {
+              font-size: 0.7em;
+              margin-left: 1em;
+              color: #bb7777;
+            }
+          }
+        }
+
+      }
+
+      nav {
+        width: 240px;
+        float: left;
+        margin-left: 10px;
+
+        div {
+          margin-bottom: 2em;
+          margin-left: 1em;
+
+          h2 {
+            margin-bottom: 0.5em;
+            background-color: #aaaaaa;
+            height: 60px;
+          }
+
+          a {
+            font-size: 0.9em;
+            display: block;
+            width: 100%;
+            text-align: center;
+            line-height: 60px;
+            text-decoration: none;
+            font-size: 1.4em;
+            letter-spacing: 0.2em;
+          }
+
+          a:link    { color: #ffffff; }
+          a:visited { color: #ffffff; }
+          a:hover   { color: #ffdddd; }
+          a:active  { color: #ffffff; }
+        }
+      }
+  }
+
+  footer {
+    @include main-wrapper();
+    clear: both;
+    margin-bottom: 2em;
+  }
+
+}

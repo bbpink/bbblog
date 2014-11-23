@@ -1,0 +1,13 @@
+#config file
+production: false
+production_host: sevensenses.jp/bbpink
+development_host: sevensenses.jp/bbpink
+production_title: bbpink近況
+development_title: bbpink近況
+template_dir: ../views
+template_cache: ../data/template_cache
+stylesheet_dir: ../views/styles
+stylesheet_cache: ../data/stylesheet_cache
+db_path: ../data/db/bbblog.db
+development_contact: p@p
+production_contact: p@p
